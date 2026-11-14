@@ -21,14 +21,14 @@ const navMenuItems = [
     current: currentPath.startsWith('/blog') || currentPath.startsWith('/tags'),
   },
   {
+    href: withBase('/destiny/'),
+    title: 'Destiny',
+    current: currentPath === '/destiny/',
+  },
+  {
     href: withBase('/experience/'),
     title: 'Experience',
     current: currentPath === '/experience/',
-  },
-  {
-    href: withBase('/projects/'),
-    title: 'Projects',
-    current: currentPath === '/projects/',
   },
   {
     href: withBase('/colors/'),

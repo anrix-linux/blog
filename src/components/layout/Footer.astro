@@ -1,5 +1,5 @@
 ---
-import { SITE_NAME, SOURCE_URL } from '@/lib/site';
+import { AUTHOR_NAME, SOURCE_URL } from '@/lib/site';
 
 const fullYear = new Date().getFullYear();
 ---
@@ -7,13 +7,16 @@ const fullYear = new Date().getFullYear();
 <footer
   class:list={[
     'flex',
+    'flex-wrap',
     'items-center',
     'justify-center',
-    'gap-4',
+    'gap-x-3',
+    'gap-y-2',
     'border-t-4',
     'border-ink',
     'px-5',
     'py-7',
+    'text-center',
     'font-heading',
     'text-[0.95rem]',
     'font-semibold',
@@ -21,9 +24,18 @@ const fullYear = new Date().getFullYear();
   ]}
 >
   <span>
-    &copy; {fullYear}
-    <a href={SOURCE_URL} target="_blank" rel="noopener" class="underline underline-offset-4">
-      {SITE_NAME}
+    &copy; {fullYear} {AUTHOR_NAME} &middot;
+    <a
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline underline-offset-4"
+    >
+      CC BY-NC-SA 4.0
+    </a>
+    &middot;
+    <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">
+      Source (AGPL-3.0)
     </a>
   </span>
 </footer>

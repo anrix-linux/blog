@@ -11,7 +11,6 @@ import Icon from '@/components/common/Icon.astro';
 import InstantPhoto from '@/components/common/InstantPhoto.astro';
 import PageHero from '@/components/common/PageHero.astro';
 import Sunlight from '@/components/effects/Sunlight.astro';
-import portrait from '@/assets/home/portrait.jpg';
 import { getIcon } from '@/lib/icons';
 import { withBase } from '@/lib/paths';
 import { AUTHOR_NAME, GITHUB_URL, JOB_TITLE, LINKEDIN_URL, SITE_DESCRIPTION, SITE_NAME } from '@/lib/site';
@@ -27,19 +26,22 @@ const personSchema = JSON.stringify({
 
 const highlights = [
   {
-    icon: getIcon('leaf'),
-    title: 'Four seasons',
-    description: 'Autumn, winter, spring, and summer palettes that follow the calendar.',
+    icon: getIcon('terminal'),
+    title: 'Anrix Linux',
+    description:
+      'A debloated, LFS-based distribution built with runit, self-modified kernels, and GitHub Actions automation.',
   },
   {
-    icon: getIcon('sun-moon'),
-    title: 'Light and dark',
-    description: 'Every season has both modes, and the toggle remembers your choice.',
+    icon: getIcon('package'),
+    title: 'Pi',
+    description:
+      'A fast, minimal package manager featuring Zstd compression, flat-file metadata, and DAG dependency resolution.',
   },
   {
-    icon: getIcon('article'),
-    title: 'Blog ready',
-    description: 'Markdown and MDX posts with tags, an RSS feed, and instant search.',
+    icon: getIcon('git-branch'),
+    title: 'Ports',
+    description:
+      'CRUX-inspired source build recipes with automated binary caching so you compile only what you customize.',
   },
 ];
 ---
@@ -66,26 +68,121 @@ const highlights = [
         >
           <div class="flex flex-col items-start gap-8">
             <h2 class:list={['text-[clamp(3rem,4.5vw,4.25rem)]', 'leading-[1.1]', 'tracking-[-0.03em]']}>
-              A <Highlight handDrawn>season-aware</Highlight>, <Highlight handDrawn>neobrutalist</Highlight> theme for
-              <Highlight handDrawn>your blog</Highlight>
+              What the metal <Highlight handDrawn>needs</Highlight>, not what{' '}
+              <Highlight handDrawn>it accepts</Highlight>.
             </h2>
             <div class="flex flex-wrap gap-4">
               <Button href={withBase('/blog/')}>
                 Read the blog
                 <Icon icon={getIcon('arrow-right')} />
               </Button>
-              <Button href={withBase('/projects/')} variant="secondary">
-                See projects
+              <Button href={withBase('/destiny/')} variant="secondary">
+                Our destiny
               </Button>
             </div>
           </div>
           <InstantPhoto
-            src={portrait}
-            alt="A tabby cat with wide golden eyes looking straight at the camera"
-            caption="Strike a pose!"
-            loading="eager"
+            caption="Towards metal."
             class:list={['w-full', 'max-w-72', 'sm:max-w-96', 'md:max-w-72', 'max-md:self-center', 'shrink-0']}
-          />
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 600 600"
+              role="img"
+              aria-label="Tux the Linux penguin mascot"
+              class="h-full w-full"
+            >
+              <!-- Seasonal Technical Grid -->
+              <path
+                stroke="var(--ink)"
+                stroke-opacity="0.14"
+                stroke-width="2"
+                d="M20 150h560M20 300h560M20 450h560M150 20v560M300 20v560M450 20v560"
+              />
+
+              <g transform="translate(36, 12) scale(0.88)">
+                <!-- Body Silhouette (Always dark obsidian, with subtle --ink rim for dark-mode separation) -->
+                <path
+                  fill="#141416"
+                  stroke="var(--ink)"
+                  stroke-opacity="0.35"
+                  stroke-width="5"
+                  d="M162 460c-24.3-35.1-29-149.2 27.8-219.5 28.2-33.6 35.4-57 37.6-88.7C229 115.8 202 8.5 303.5.5c103-8.3 97.2 93.2 96.6 147-.3 45.2 33.3 71 56.5 106.4 42.7 65 39.2 176.7-8 237.3-59.9 75.7-111 42.9-145 45.6-63.8 3.8-66 37.6-141.5-76.9"
+                />
+                <!-- Right Wing -->
+                <path
+                  fill="#e4e4e7"
+                  stroke="#141416"
+                  stroke-width="8"
+                  d="M405.5 250.8c29 23.6 82 106.2 4.7 160.1-25.4 16.7 22.4 69.7 49.4 42.7 93.4-94-2.4-202-35.4-239.2-29.6-32.5-55.7 7.4-18.7 36.4Z"
+                />
+                <!-- Belly (Always crisp off-white) -->
+                <path
+                  fill="#f4f4f5"
+                  stroke="#141416"
+                  stroke-width="6"
+                  d="M200.2 310.4c14-31.7 43.7-87.4 44.3-130.5 0-34.2 102.5-42.5 110.8-8.2a569 569 0 0 0 42.5 110.1c13.4 24.6 52.1 103.1 10.8 171.6-37.2 60.6-150 108.6-210.1-8.2-20.5-40.6-16.8-90.8 1.7-134.8"
+                />
+                <!-- Left Wing -->
+                <path
+                  fill="#e4e4e7"
+                  stroke="#141416"
+                  stroke-width="8"
+                  d="M197.9 261.2c-19.1 31-64.8 104.3-3.6 142.4 82.3 50.6 59 101-16 55.5-106-63.3-12.9-191.2 29.4-240 48.4-54.7 9.3 10-9.8 42Z"
+                />
+                <!-- Eyes -->
+                <path
+                  fill="#f4f4f5"
+                  stroke="#141416"
+                  stroke-width="5"
+                  d="M278.4 116c1 17.5-7.3 32.2-18.7 32.8s-21.5-13-22.5-30.5 7.3-32.2 18.7-32.8 21.5 13 22.5 30.5"
+                />
+                <path
+                  fill="#f4f4f5"
+                  stroke="#141416"
+                  stroke-width="5"
+                  d="M299 117.3c.4 20.3 13.6 36.4 29.3 36s28.2-17 27.8-37.5c-.4-20.3-13.6-36.4-29.3-36S298.4 97 299 117.3"
+                />
+                <path
+                  fill="#141416"
+                  d="M312 121.9c-.2 11.2 5.3 20.2 12.6 20.2 7 0 13.2-9 13.4-20 .2-11.2-5.3-20.3-12.6-20.3s-13.2 9-13.4 20m-45.4.2c1 9.3-2.6 17.2-7.7 18-5.1.6-10-6.3-11-15.6-1-9.2 2.5-17 7.6-17.9 5.1-.6 10 6.3 11 15.6"
+                />
+                <circle cx="320" cy="114" r="4.5" fill="#ffffff" />
+                <circle cx="256" cy="115" r="4" fill="#ffffff" />
+                <!-- Left Foot (Seasonal --accent) -->
+                <path
+                  fill="var(--accent)"
+                  stroke="#141416"
+                  stroke-width="8"
+                  stroke-linejoin="round"
+                  d="M159.1 552.2c-44-23.4-108 4.5-84.8-58.8 4.7-14.4-6.9-36 .6-50 8.9-17.1 28-13.4 39.4-24.8 11.2-11.8 18.3-32.3 39.3-29.1s34.8 28.7 49.4 60.2c10.8 22.4 49 54 46.4 79.3-3.1 38.5-47 45.8-90.3 23.2Z"
+                />
+                <!-- Right Foot (Seasonal --accent) -->
+                <path
+                  fill="var(--accent)"
+                  stroke="#141416"
+                  stroke-width="8"
+                  stroke-linejoin="round"
+                  d="M464.7 541.4c32.3-39.2 104-31.1 55.7-84.8-10.3-11.6-7.1-36.4-19.7-47-14.8-13-31-2.4-46-9.1-15-7.3-30.7-21.3-49-11.4s-20.3 36-22 70.2c-1.7 24.6-24 65.7-12 88.4 17.2 35 62.3 30.3 93-6.3Z"
+                />
+                <!-- Beak (Seasonal --accent) -->
+                <path
+                  fill="var(--accent)"
+                  stroke="#141416"
+                  stroke-width="7"
+                  stroke-linejoin="round"
+                  d="M256.1 140.4c7.9-7.3 27-29.5 63.2-6.3 6.7 4.3 12.2 4.7 25 10.2 25.7 10.6 13.5 36.2-14 44.9-11.8 3.7-22.4 18-43.7 16.7-18.3-1-23-13-34.2-19.5-19.9-11.2-22.8-26.4-12-34.4z"
+                />
+                <path
+                  stroke="#141416"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  d="M344.7 161c-10.9.6-34.3 24-58.9 24s-39.3-22.8-43-22.8"
+                />
+              </g>
+            </svg>
+          </InstantPhoto>
         </div>
       </PageHero>
 
@@ -95,12 +192,12 @@ const highlights = [
             <div class="about-prose">
               <!-- prettier-ignore -->
               <p>
-                <Highlight bold handDrawn>Seasons</Highlight> is a <Highlight bold handDrawn>neobrutalist</Highlight> Astro theme for personal sites and blogs. Its colors follow the calendar, moving through <Highlight bold handDrawn>autumn</Highlight>, <Highlight bold handDrawn>winter</Highlight>, <Highlight bold handDrawn>spring</Highlight>, and <Highlight bold handDrawn>summer</Highlight>, each with a light and a dark mode.
+                I'm <Highlight bold handDrawn>S Ehfaz Saad</Highlight>, an independent systems developer building <Highlight bold handDrawn>Anrix</Highlight>—a debloated, LFS-based Linux distribution automated with GitHub Actions—alongside low-level utilities in <Highlight bold handDrawn>C</Highlight>, <Highlight bold handDrawn>Zig</Highlight>.
               </p>
 
               <!-- prettier-ignore -->
               <p>
-                Replace this card with a short introduction about yourself, and <Highlight bold handDrawn>make it yours</Highlight>.
+                This blog is my public engineering log for kernel internals, bare-metal <Highlight bold handDrawn>Dell Inspiron 15 3520</Highlight> experiments, and custom Linux tooling. Give the metal what it needs—<Highlight bold handDrawn>nothing more</Highlight>.
               </p>
             </div>
           </Card>
