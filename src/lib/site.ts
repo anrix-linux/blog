@@ -3,6 +3,7 @@ export const AUTHOR_NAME = 'S Ehfaz Saad';
 export const SITE_DESCRIPTION = 'Towards metal.';
 export const JOB_TITLE = 'Student';
 export const SITE_URL = 'https://blog.anrix.org';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/your-username';
 export const GITHUB_URL = 'https://github.com/ezke5';
 // AGPL-3.0 section 13: point this at the repository that builds your deployed site.
 export const SOURCE_URL = 'https://github.com/anrix-linux/blog';
